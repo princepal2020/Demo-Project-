@@ -1,0 +1,430 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props" Condition="Exists('packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D563FA21-717A-4F6E-80FA-FBF07FCBBEBB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>B2bWebsite_WTS</RootNamespace>
+    <AssemblyName>B2bWebsite_WTS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44361</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerLaunchUrl>http://{ServiceIPAddress}</DockerLaunchUrl>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AadharPay.aspx" />
+    <Content Include="AboutUs.aspx" />
+    <Content Include="AEPS.aspx" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\images\aadhaar2%27.png" />
+    <Content Include="assets\images\Aadhaar_banner.png" />
+    <Content Include="assets\images\aadhaar_pay_BG.png" />
+    <Content Include="assets\images\aadhaar_Services.png" />
+    <Content Include="assets\images\About image2.png" />
+    <Content Include="assets\images\About_banner.png" />
+    <Content Include="assets\images\About_img.png" />
+    <Content Include="assets\images\about_indx%28bg%29.png" />
+    <Content Include="assets\images\academics.png" />
+    <Content Include="assets\images\academics_bg.png" />
+    <Content Include="assets\images\aeps.png" />
+    <Content Include="assets\images\aeps_banner.png" />
+    <Content Include="assets\images\Aeps_bimage.png" />
+    <Content Include="assets\images\aeps_offerimg.png" />
+    <Content Include="assets\images\aeps_offers.png" />
+    <Content Include="assets\images\banner_bg.png" />
+    <Content Include="assets\images\banner_bg2.png" />
+    <Content Include="assets\images\banner_card.png" />
+    <Content Include="assets\images\banner_girl.png" />
+    <Content Include="assets\images\bbps_banner_image.png" />
+    <Content Include="assets\images\bbps_bg.png" />
+    <Content Include="assets\images\bbps_feature.png" />
+    <Content Include="assets\images\bbps_features_bg.png" />
+    <Content Include="assets\images\booking.png" />
+    <Content Include="assets\images\books.png" />
+    <Content Include="assets\images\bulb.png" />
+    <Content Include="assets\images\bulb2.png" />
+    <Content Include="assets\images\bullet.png" />
+    <Content Include="assets\images\bus-ticket.png" />
+    <Content Include="assets\images\Card_bg.png" />
+    <Content Include="assets\images\card_type_bg.png" />
+    <Content Include="assets\images\carousel1.png" />
+    <Content Include="assets\images\carousel2.png" />
+    <Content Include="assets\images\CMS.png" />
+    <Content Include="assets\images\cms2.png" />
+    <Content Include="assets\images\computer.png" />
+    <Content Include="assets\images\computer_bg.png" />
+    <Content Include="assets\images\contact_2.png" />
+    <Content Include="assets\images\contact_banner.png" />
+    <Content Include="assets\images\data_card.png" />
+    <Content Include="assets\images\dmt.png" />
+    <Content Include="assets\images\dmt_bg.png" />
+    <Content Include="assets\images\drawing.png" />
+    <Content Include="assets\images\dth.png" />
+    <Content Include="assets\images\dtm.png" />
+    <Content Include="assets\images\emaail_bg.png" />
+    <Content Include="assets\images\email_bg.png" />
+    <Content Include="assets\images\events_bg.png" />
+    <Content Include="assets\images\face_paint.png" />
+    <Content Include="assets\images\facility bd.png" />
+    <Content Include="assets\images\facility2.png" />
+    <Content Include="assets\images\fastag1.png" />
+    <Content Include="assets\images\fastag2.png" />
+    <Content Include="assets\images\fastag_banner.png" />
+    <Content Include="assets\images\fastag_img.png" />
+    <Content Include="assets\images\fb.png" />
+    <Content Include="assets\images\features_bbps.png" />
+    <Content Include="assets\images\features_bbps_bg.png" />
+    <Content Include="assets\images\gift-card.png" />
+    <Content Include="assets\images\gold.png" />
+    <Content Include="assets\images\gold2.png" />
+    <Content Include="assets\images\gold_banner.png" />
+    <Content Include="assets\images\grad_hat.png" />
+    <Content Include="assets\images\Group 4.png" />
+    <Content Include="assets\images\how_aeps_bg.png" />
+    <Content Include="assets\images\how_fastag_bg.png" />
+    <Content Include="assets\images\how_safegold.png" />
+    <Content Include="assets\images\image-removebg-preview %282%29.png" />
+    <Content Include="assets\images\index_banner.png" />
+    <Content Include="assets\images\insta.png" />
+    <Content Include="assets\images\join_bg.png" />
+    <Content Include="assets\images\kids.png" />
+    <Content Include="assets\images\library.png" />
+    <Content Include="assets\images\lic.png" />
+    <Content Include="assets\images\lic_banner.png" />
+    <Content Include="assets\images\lic_bg.png" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\logo2.png" />
+    <Content Include="assets\images\logo_icon.png" />
+    <Content Include="assets\images\memory-card.png" />
+    <Content Include="assets\images\mi.png" />
+    <Content Include="assets\images\Microatm_banner.png" />
+    <Content Include="assets\images\micro_atm.png" />
+    <Content Include="assets\images\micro_bg.png" />
+    <Content Include="assets\images\mission_bg.png" />
+    <Content Include="assets\images\mobile 1.png" />
+    <Content Include="assets\images\mobile.png" />
+    <Content Include="assets\images\online-reservation.png" />
+    <Content Include="assets\images\Pan.png" />
+    <Content Include="assets\images\pan_banner.png" />
+    <Content Include="assets\images\PAN_CENTER.png" />
+    <Content Include="assets\images\pan_center_bg.png" />
+    <Content Include="assets\images\pan_img.png" />
+    <Content Include="assets\images\parade.png" />
+    <Content Include="assets\images\prepaid_img.png" />
+    <Content Include="assets\images\pre_recharge.png" />
+    <Content Include="assets\images\process_pan.png" />
+    <Content Include="assets\images\Process_pan_bg.png" />
+    <Content Include="assets\images\recharge.png" />
+    <Content Include="assets\images\recharge_bg.png" />
+    <Content Include="assets\images\Rectangle 32.png" />
+    <Content Include="assets\images\reloadable_card.png" />
+    <Content Include="assets\images\science.png" />
+    <Content Include="assets\images\science_bg.png" />
+    <Content Include="assets\images\sports.png" />
+    <Content Include="assets\images\t1.png" />
+    <Content Include="assets\images\t2.png" />
+    <Content Include="assets\images\t3.png" />
+    <Content Include="assets\images\t4.png" />
+    <Content Include="assets\images\t5.png" />
+    <Content Include="assets\images\team_bg.png" />
+    <Content Include="assets\images\train.png" />
+    <Content Include="assets\images\travel_banner.png" />
+    <Content Include="assets\images\travel_services_bg.png" />
+    <Content Include="assets\images\twitter.png" />
+    <Content Include="assets\images\type_recharge_bg.png" />
+    <Content Include="assets\images\upcoming_bg.png" />
+    <Content Include="assets\images\use_card.png" />
+    <Content Include="assets\images\virtual_card.png" />
+    <Content Include="assets\images\we.png" />
+    <Content Include="assets\images\we_banner.png" />
+    <Content Include="assets\images\we_bg.png" />
+    <Content Include="assets\images\What_CMS.png" />
+    <Content Include="assets\images\what_fastag.png" />
+    <Content Include="assets\images\what_image.png" />
+    <Content Include="assets\images\why_bg.png" />
+    <Content Include="assets\images\Why_dmt.png" />
+    <Content Include="assets\images\why_dmt_bg.png" />
+    <Content Include="assets\images\why_image.png" />
+    <Content Include="assets\images\youtube.png" />
+    <Content Include="BBPS.aspx" />
+    <Content Include="CashManagement.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="CreditLic.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DMT.aspx" />
+    <Content Include="FastTag.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\About_banner.png" />
+    <Content Include="MicroAtm.aspx" />
+    <Content Include="PanCardCenter.aspx" />
+    <Content Include="PrepaidCard.aspx" />
+    <Content Include="PreRecharge.aspx" />
+    <Content Include="SafeGold.aspx" />
+    <Content Include="TravelStay.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AadharPay.aspx.cs">
+      <DependentUpon>AadharPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AadharPay.aspx.designer.cs">
+      <DependentUpon>AadharPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AEPS.aspx.cs">
+      <DependentUpon>AEPS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AEPS.aspx.designer.cs">
+      <DependentUpon>AEPS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\ClsAboutSection1.cs" />
+    <Compile Include="App_Code\ClsAboutSection2.cs" />
+    <Compile Include="App_Code\ClsAboutSection3.cs" />
+    <Compile Include="App_Code\ClsAboutSection4.cs" />
+    <Compile Include="App_Code\ClsAadharPay.cs" />
+    <Compile Include="App_Code\ClsAEPS.cs" />
+    <Compile Include="App_Code\ClsB2bWebsiteConn.cs" />
+    <Compile Include="App_Code\ClsHomeSection1.cs" />
+    <Compile Include="App_Code\ClsHomeSection2.cs" />
+    <Compile Include="App_Code\ClsHomeSection3.cs" />
+    <Compile Include="App_Code\ClsHomeSection4.cs" />
+    <Compile Include="App_Code\ClsBBPS.cs" />
+    <Compile Include="App_Code\ClsCashManagement.cs" />
+    <Compile Include="App_Code\ClsCreditLic.cs" />
+    <Compile Include="App_Code\ClsPanCard.cs" />
+    <Compile Include="App_Code\ClsMicroAtm.cs" />
+    <Compile Include="App_Code\ClsPreRecharge.cs" />
+    <Compile Include="App_Code\ClsSafeGold.cs" />
+    <Compile Include="App_Code\ClsDMT.cs" />
+    <Compile Include="App_Code\ClsFastTag.cs" />
+    <Compile Include="App_Code\ClsSlider.cs" />
+    <Compile Include="B2bWeb.Master.cs">
+      <DependentUpon>B2bWeb.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="B2bWeb.Master.designer.cs">
+      <DependentUpon>B2bWeb.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BBPS.aspx.cs">
+      <DependentUpon>BBPS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBPS.aspx.designer.cs">
+      <DependentUpon>BBPS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CashManagement.aspx.cs">
+      <DependentUpon>CashManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CashManagement.aspx.designer.cs">
+      <DependentUpon>CashManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditLic.aspx.cs">
+      <DependentUpon>CreditLic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditLic.aspx.designer.cs">
+      <DependentUpon>CreditLic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMT.aspx.cs">
+      <DependentUpon>DMT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMT.aspx.designer.cs">
+      <DependentUpon>DMT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FastTag.aspx.cs">
+      <DependentUpon>FastTag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FastTag.aspx.designer.cs">
+      <DependentUpon>FastTag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MicroAtm.aspx.cs">
+      <DependentUpon>MicroAtm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MicroAtm.aspx.designer.cs">
+      <DependentUpon>MicroAtm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PanCardCenter.aspx.cs">
+      <DependentUpon>PanCardCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PanCardCenter.aspx.designer.cs">
+      <DependentUpon>PanCardCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrepaidCard.aspx.cs">
+      <DependentUpon>PrepaidCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrepaidCard.aspx.designer.cs">
+      <DependentUpon>PrepaidCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreRecharge.aspx.cs">
+      <DependentUpon>PreRecharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreRecharge.aspx.designer.cs">
+      <DependentUpon>PreRecharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SafeGold.aspx.cs">
+      <DependentUpon>SafeGold.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SafeGold.aspx.designer.cs">
+      <DependentUpon>SafeGold.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TravelStay.aspx.cs">
+      <DependentUpon>TravelStay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TravelStay.aspx.designer.cs">
+      <DependentUpon>TravelStay.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="B2bWeb.Master" />
+    <None Include="Dockerfile" />
+    <None Include=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="assets\img\" />
+    <Folder Include="assets\js\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57989</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44361/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <Import Project="packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets" Condition="Exists('packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
